@@ -4,8 +4,6 @@
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="style.css">
-        <link type="text/css" rel="stylesheet" href="darkmode.css">
-
         <title>Dark Mode Web</title>
     </head>
 
@@ -28,15 +26,15 @@
                 <h2>How to use:</h2>
                 <p>Usage is very simple. you just have to include the js file (can only be js code) in you page.</p>
                 <p>Define css variables under the <code>root</code> or <code>body</code>. Keep in mind, these are used for dark mode.</p>
-                <p>Override css variables for the light mode under the class <code>.has-lightmode</code>.</p>
+                <p>Override css variables for the light mode under the class <code>.web-light</code>.</p>
                 <p>That is it.</p>
                 <h2>How it works?</h2>
-                <p>The code will add <code>.has_darkmode</code> or <code>.has_lightmode</code> class to the body on page load.</p>
-                <p>If user has switched color scheme using the theme switcher, body will additionally contain <code>.has-lightmode__forced</code> or <code>.has-darkmode__forced</code> according to the theme.</p>
+                <p>The code will add <code>.web-dark</code> or <code>.web-light</code> class to the body on page load.</p>
+                <p>If user has switched color scheme using the theme switcher, body will additionally contain <code>.light-forced</code> or <code>.dark-forced</code> according to the theme.</p>
                 <P>These additional classes will allow you to modify the color scheme if you want something different for forced color scheme.</P>
             </article>
         </main>
 
-        <script src="darkmode.js"></script>
+        <script src="darkmodeweb.js"></script>
     </body>
 </html>

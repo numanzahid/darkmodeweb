@@ -50,18 +50,18 @@ Define css variables under the `root` or `body`. Keep in mind, these are
 used for dark mode.
 
 Override css variables for the light mode under the class
-`.has-lightmode`.
+`.web-light`.
 
 That is it.
 
 How it works?
 -------------
 
-The code will add `.has_darkmode` or `.has_lightmode` class to the body
+The code will add `.web-dark` or `.web-light` class to the body
 on page load.
 
 If user has switched color scheme using the theme switcher, body will
-additionally contain `.has-lightmode__forced` or `.has-darkmode__forced`
+additionally contain `.light-forced` or `.dark-forced`
 according to the theme.
 
 These additional classes will allow you to modify the color scheme if
