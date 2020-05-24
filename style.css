@@ -3,21 +3,20 @@ body {
     --secondary-text: #ececec;
     --code-text: #bfbfbf;
     --primary-bg: #111111;
-    --secondary-bg: #212121;
+    --secondary-bg: #444444;
     --grad: radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 52, 89, 1) 0%, rgba(0, 168, 232, 1) 90%);
     --promary-font: 'Ubuntu', sans-serif;
 }
-@media (prefers-color-scheme:light) {
+/*@media (prefers-color-scheme:light) {
     body.web-light {
         --primary-text: #111111;
         --secondary-text: #212121;
         --code-text: #2d2d2d;
         --primary-bg: #fff;
-        --secondary-bg: #ececec;
+        --secondary-bg: #c9c9c9;
         --grad: linear-gradient( 90deg,  rgba(255,236,210,1) 31.8%, rgba(252,182,159,1) 69.1% );
     }
-}
-/*
+}*/
 body.light-forced {
     --primary-text: #111111;
     --secondary-text: #212121;
@@ -26,7 +25,6 @@ body.light-forced {
     --secondary-bg: #ececec;
     --grad: linear-gradient( 90deg,  rgba(255,236,210,1) 31.8%, rgba(252,182,159,1) 69.1% );
 }
-*/
 * {
     margin: 0;
     padding: 0;
@@ -81,6 +79,20 @@ body {
     grid-template-rows: auto;
     grid-gap: 10px;
 }
+.wrapper nav {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-gap: 20px;
+}
+.wrapper nav a {
+    text-decoration: none;
+    font-weight: 400;
+    background: var(--secondary-bg);
+    padding: 5px 15px;
+    border-radius: 2px;
+}
+
 .add-btn {
     justify-self: center;
 }

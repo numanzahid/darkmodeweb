@@ -10,9 +10,9 @@ var body = document.getElementsByTagName("body")[0];
 window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").addListener(useBrowserScheme);
 window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").addListener(useBrowserScheme);
 
-if (localStorage.hasStorage === 'dark') {
+if (localStorage.darkmodeweb === 'dark') {
     addDark();
-} else if (localStorage.hasStorage === 'light') {
+} else if (localStorage.darkmodeweb === 'light') {
     addLight();
 } else {
     useBrowserScheme();
@@ -23,31 +23,34 @@ function changeMode() {
     var hasLight = body.classList.contains('web-light');
     if (hasLight) {
         addDark();
-        localStorage.hasStorage = 'dark';
+        localStorage.darkmodeweb = 'dark';
     } else if (hasDark) {
         addLight();
-        localStorage.hasStorage = 'light';
+        localStorage.darkmodeweb = 'light';
     }
-    return localStorage.hasStorage;
+    return localStorage.darkmodeweb;
 }
+
 // callback functions
 function useBrowserScheme() {
     var browserPreferslight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
     var browserPrefersdark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (browserPreferslight && localStorage.hasStorage == null) {
+    if (browserPreferslight && localStorage.darkmodeweb == null) {
         body.classList.toggle("web-light", true);
         body.classList.toggle("web-dark", false);
-    } else if (browserPrefersdark && localStorage.hasStorage == null) {
+    } else if (browserPrefersdark && localStorage.darkmodeweb == null) {
         body.classList.toggle("web-dark", true);
         body.classList.toggle("web-light", false);
     }
 }
+
 function addDark() {
     body.classList.add("web-dark");
     body.classList.add("dark-forced");
     body.classList.remove("web-light");
     body.classList.remove("light-forced");
 }
+
 function addLight() {
     body.classList.remove("web-dark");
     body.classList.remove("dark-forced");
