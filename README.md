@@ -66,3 +66,8 @@ according to the theme.
 
 These additional classes will allow you to modify the color scheme if
 you want something different for forced color scheme.
+
+### Resources
+
+*   _[StackOverflow blog](https://stackoverflow.blog/)_
+*   _[Dev.to dark mode guide](https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8)_
