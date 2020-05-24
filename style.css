@@ -17,7 +17,7 @@ body {
         --grad: linear-gradient( 90deg,  rgba(255,236,210,1) 31.8%, rgba(252,182,159,1) 69.1% );
     }
 }*/
-body.light-forced {
+body.web-light {
     --primary-text: #111111;
     --secondary-text: #212121;
     --code-text: #2d2d2d;
