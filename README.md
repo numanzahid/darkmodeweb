@@ -75,3 +75,4 @@ you want something different for forced color scheme.
 
 *   _[StackOverflow blog](https://stackoverflow.blog/)_
 *   _[Dev.to dark mode guide](https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8)_
+*   _[Koos Looijesteijn dark mode guide](https://www.kooslooijesteijn.net/blog/add-dark-mode-to-website)_
