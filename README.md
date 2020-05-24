@@ -40,6 +40,10 @@ If visitor has used the switch to change the color scheme, the new
 preference will be saved in browser, and it will always override default
 `prefers-color-scheme` behavior.
 
+Sync Color Between Browser Tabs
+-------------------------------
+If user has used switch to change the color scheme in one tab and there are other tabs open of the same websitie, all the other tabs will have same color scheme. this synchronises the color scheme in all open tabs.
+
 How to use:
 -----------
 
