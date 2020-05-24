@@ -17,6 +17,7 @@ body {
         --grad: linear-gradient( 90deg,  rgba(255,236,210,1) 31.8%, rgba(252,182,159,1) 69.1% );
     }
 }
+/*
 body.light-forced {
     --primary-text: #111111;
     --secondary-text: #212121;
@@ -25,6 +26,7 @@ body.light-forced {
     --secondary-bg: #ececec;
     --grad: linear-gradient( 90deg,  rgba(255,236,210,1) 31.8%, rgba(252,182,159,1) 69.1% );
 }
+*/
 * {
     margin: 0;
     padding: 0;
