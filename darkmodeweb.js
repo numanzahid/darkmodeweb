@@ -10,13 +10,8 @@ var body = document.getElementsByTagName("body")[0];
 window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").addListener(useBrowserScheme);
 window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").addListener(useBrowserScheme);
 
-if (localStorage.darkmodeweb === 'dark') {
-    addDark();
-} else if (localStorage.darkmodeweb === 'light') {
-    addLight();
-} else {
-    useBrowserScheme();
-}
+
+addStorageColor();
 
 function changeMode() {
     var hasDark = body.classList.contains('web-dark');
@@ -31,7 +26,25 @@ function changeMode() {
     return localStorage.darkmodeweb;
 }
 
+
+window.addEventListener('storage', function(e) {
+    addStorageColor();
+    console.log('Woohoo, someone changed my localstorage va another tab/window!');
+});
+
+
 // callback functions
+
+function addStorageColor() {
+    if (localStorage.darkmodeweb === 'dark') {
+        addDark();
+    } else if (localStorage.darkmodeweb === 'light') {
+        addLight();
+    } else if (localStorage.darkmodeweb == null) {
+        useBrowserScheme();
+    }
+}
+
 function useBrowserScheme() {
     var browserPreferslight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
     var browserPrefersdark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -57,3 +70,4 @@ function addLight() {
     body.classList.add("web-light");
     body.classList.add("light-forced");
 }
+
