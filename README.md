@@ -10,7 +10,7 @@ features that I would like you to know
 Unlike all the other solutions available online, this code is written
 keeping the dark color scheme as first priority.
 
-prefers-color-scheme
+`prefers-color-scheme`
 --------------------
 
 By default the code respects the `prefers-color-scheme` as defined by
