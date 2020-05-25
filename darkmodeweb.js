@@ -7,8 +7,8 @@ setIconContainerClass.insertAdjacentHTML('beforeend', insertIconHTML);
 // mode changer
 var body = document.getElementsByTagName("body")[0];
 // these two listeners can go...
-window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").addListener(useBrowserScheme);
-window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").addListener(useBrowserScheme);
+window.matchMedia("(prefers-color-scheme: light)").addListener(useBrowserScheme);
+window.matchMedia("(prefers-color-scheme: dark)").addListener(useBrowserScheme);
 
 addStorageColor();
 
@@ -19,14 +19,14 @@ window.addEventListener('storage', function(e) {
 // callback functions
 function addStorageColor() {
     if (localStorage.darkmodeweb === 'dark') {
-        themeSwitch('dark')
-        console.log('themeswitch dark run in addstorage fn');
+        themeSwitch('dark');
+        console.log('User preference Dark');
     } else if (localStorage.darkmodeweb === 'light') {
-        themeSwitch('light')
-        console.log('themeswitch white run in addstorage fn');
+        themeSwitch('light');
+        console.log('User preference Light');
     } else if (localStorage.darkmodeweb == null) {
         useBrowserScheme();
-        console.log('browserschene run in addstorage fn');
+        console.log('Browser color preference');
     }
 }
 
@@ -34,11 +34,11 @@ function useBrowserScheme() {
     var browserPreferslight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
     var browserPrefersdark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (browserPreferslight && localStorage.darkmodeweb == null) {
-        body.classList.toggle("web-light", true);
-        body.classList.toggle("web-dark", false);
+        themeSwitchBrowser('light');
     } else if (browserPrefersdark && localStorage.darkmodeweb == null) {
-        body.classList.toggle("web-dark", true);
-        body.classList.toggle("web-light", false);
+        themeSwitchBrowser('dark');
+    } else {
+        themeSwitchBrowser('dark');
     }
 }
 
@@ -46,10 +46,10 @@ function btnThemeSwitch() {
     var hasDark = body.classList.contains('web-dark');
     var hasLight = body.classList.contains('web-light');
     if (hasLight) {
-        themeSwitch('dark')
+        themeSwitch('dark');
         localStorage.darkmodeweb = 'dark';
     } else if (hasDark) {
-        themeSwitch('light')
+        themeSwitch('light');
         localStorage.darkmodeweb = 'light';
     }
 }
@@ -65,5 +65,14 @@ function themeSwitch(colorScheme) {
         body.classList.remove("dark-forced");
         body.classList.add("web-light");
         body.classList.add("light-forced");
+    }
+}
+function themeSwitchBrowser(browserColor) {
+    if (browserColor === 'light'){
+        body.classList.toggle("web-light", true);
+        body.classList.toggle("web-dark", false);
+    } else if (browserColor === 'dark') {
+        body.classList.toggle("web-dark", true);
+        body.classList.toggle("web-light", false);
     }
 }
