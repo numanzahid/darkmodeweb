@@ -1,4 +1,4 @@
-Dark Mode Web Respecting prefers-color-scheme and switch
+Dark Mode Web Respecting `prefers-color-scheme` and switch
 ========================================================
 
 This code was inspired by
