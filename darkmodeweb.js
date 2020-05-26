@@ -13,20 +13,23 @@ window.matchMedia("(prefers-color-scheme: dark)").addListener(useBrowserScheme);
 addStorageColor();
 
 window.addEventListener('storage', function(e) {
-    addStorageColor();
+    if (localStorage.darkmodeweb) {
+        // console.log('storage event');
+        addStorageColor();
+    }
 });
 
 // callback functions
 function addStorageColor() {
     if (localStorage.darkmodeweb === 'dark') {
         themeSwitch('dark');
-        console.log('User preference Dark');
+        // console.log('User preference Dark');
     } else if (localStorage.darkmodeweb === 'light') {
         themeSwitch('light');
-        console.log('User preference Light');
+        // console.log('User preference Light');
     } else if (localStorage.darkmodeweb == null) {
         useBrowserScheme();
-        console.log('Browser color preference');
+        // console.log('Browser color preference');
     }
 }
 
