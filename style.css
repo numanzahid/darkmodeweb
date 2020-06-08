@@ -80,10 +80,10 @@ body {
     grid-template-rows: auto;
     grid-gap: 10px;
     align-items: center;
+    justify-items: center;
 }
 .wrapper ul li {
     list-style: none;
-    margin-left: 30px;
 }
 .wrapper nav {
     display: grid;
@@ -105,7 +105,7 @@ body {
 .svg-icon path {
     fill: var(--secondary-text);
 }
-.web-dark-btn {
+#theme-button {
     background: transparent;
     border: 1px solid var(--primary-text);
     height: 60px;
