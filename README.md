@@ -33,8 +33,7 @@ Color Scheme Switch
 Switch can be added to the website anywhere you like. It is an icon in
 the example page. But it can be changed to anything.
 
-Switch allows visitor to change the color scheme. It will override the
-default behaviour.
+Switch allows visitor to change the color scheme. It will override the default behavior.
 
 If visitor has used the switch to change the color scheme, the new
 preference will be saved in browser, and it will always override default
@@ -42,7 +41,7 @@ preference will be saved in browser, and it will always override default
 
 Sync Color Between Browser Tabs
 -------------------------------
-If user has used switch to change the color scheme in one tab and there are other tabs open of the same websitie, all the other tabs will have same color scheme. this synchronises the color scheme in all open tabs.
+If user has used switch to change the color scheme in one tab and there are other tabs open of the same website, all the other tabs will have same color scheme. this synchronizes the color scheme in all open tabs.
 
 How to use:
 -----------
